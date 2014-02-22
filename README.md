@@ -31,3 +31,15 @@ Query example (via SQL statement)
 http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT * from "be80a13b-e6d8-4943-934b-d22a4c75affe"  WHERE title LIKE 'jones'
 
 
+School Table
+============
+http://nycdoe.pediacities.com/dataset/hsdirectory/resource/45f6a257-c13a-431b-acb9-b1468c3ff1e9
+
+Significant Columns: BN | Building Code | loc | Boro | Printed Name | Alphabetic_Name_Long | grade span YYYY-YYYY min | grade span YYYY-YYYY max | Bus | Subway | Total Students MM/DD | Advanced Placement Courses | Neighborhood | Postal Code
+
+Query: select BN, Building Code, loc, Boro, Printed Name, Alphabetic_Name_Long, grade span YYYY-YYYY min, grade span YYYY-YYYY max, Bus, Subway, Total Students MM/DD, Advanced Placement Courses, Neighborhood, Postal Code from "45f6a257-c13a-431b-acb9-b1468c3ff1e9"
+
+Query example (via SQL statement)
+http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT * from "45f6a257-c13a-431b-acb9-b1468c3ff1e9" WHERE title LIKE 'jones'
+
+
