@@ -43,4 +43,10 @@ Query example (via SQL statement)
 http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT * from "45f6a257-c13a-431b-acb9-b1468c3ff1e9" WHERE title LIKE 'jones'
 
 
+Safety data
+===========
+http://www.pediacities.com/2014/02/nyc-crime-map/
+
+
+
 Thanks Emily Pries for information in selecting data.
