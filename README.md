@@ -50,3 +50,5 @@ http://www.pediacities.com/2014/02/nyc-crime-map/
 
 
 Thanks Emily Pries for information in selecting data.
+Thanks to Nick Collins for help in debugging arguments to main and Pythonic coding styles to create strings for the url.
+
