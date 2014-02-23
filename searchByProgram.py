@@ -21,9 +21,16 @@ def getSchoolsByProgramHighlights(queryContains):
 
     #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22where%20%22Program%20Highlights%22%20like%20%22{0}%22'.format(queryContains)
     #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22where%20%22Program%20Highlights%22%20like%20%22%25{0}%25%22'.format(queryContains)
-    url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22%20where%20%22Program%20Highlights%22%20like%20%22{0}%22'.format(queryContains)
+    #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22%20where%20%22Program%20Highlights%22%20like%20%22%25{0}%25%22'.format(queryContains)
+    #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22%20where%20%22Program%20Highlights%22%20in%20%22{0}%22'.format(queryContains)
+    #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?'
+    #url += 'sql=SELECT "Printed_Name", "Program Highlights" from "45f6a257-c13a-431b-acb9-b1468c3ff1e9"'
+    #url += ' where "Program Highlights" like '{0}''.format(queryContains)
+    #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%20%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22%20where%20%22Program%20Highlights%22%20like%20%27Core%%27'
+    url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT%20%22Printed_Name%22,%20%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22%20where%20%22Program%20Highlights%22%20like%20%27{0}%%27'.format(queryContains)
 
 
+#url = http://nycdoe.pediacities.com/api/action/datastore_search_sql?sql=SELECT "Printed_Name", "Program Highlights" from "45f6a257-c13a-431b-acb9-b1468c3ff1e9" where "Program Highlights" like "Core"'
 
     #url = 'http://nycdoe.pediacities.com/api/action/datastore_search_sql?' \
     #      'sql=SELECT%20%22Printed_Name%22,%22Program%20Highlights%22%20from%20%2245f6a257-c13a-431b-acb9-b1468c3ff1e9%22'
@@ -48,7 +55,7 @@ def getSchoolsByProgramHighlights(queryContains):
 
 
     for k in j['result']['records']:
-        print(k['Printed_Name'] + " " + k['Program Highlights'] + "\n")
+        print(k['Printed_Name'] + " | " + k['Program Highlights'] + "\n")
 
     return j
 
