@@ -15,7 +15,9 @@ http = urllib3.PoolManager()
 
 r = http.request('GET', url)
 
-j = json.loads(r.data)
+#Python 3 requires explicit Bytes to String conversions
+# See http://www.rmi.net/~lutz/strings30.html
+j = json.loads(r.data.decode())
 
 print (j.keys())
 #print (type(j))
